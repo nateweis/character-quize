@@ -8,6 +8,13 @@
   </head>
   <body ng-controller="GameController as game">
     <h1>Who is your anime character?</h1>
-    {{2+2}}
+    <button type="button" ng-click="game.getCharacterInfo()" name="button">Click</button>
+    <div class="" ng-if="game.character">
+      <h3>{{game.character.name}}</h3>
+      <img ng-src="{{game.character.image_url}}" alt="">
+      <p">A {{game.character.animeography[0].role}} character from the show {{game.character.animeography[0].name}}</p>
+      <p">A {{game.character.mangaography[0].role}} character from the manga {{game.character.mangaography[0].name}}</p>
+      <p>{{game.character.about}}</p>
+    </div>
   </body>
 </html>
