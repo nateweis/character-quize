@@ -20,8 +20,8 @@ app.use(express.static('public'));
 //               Controller
 // =======================================
 
-// const gameController = require('./controllers/gameRoutes.js')
-// app.use('/game', gameController)
+const gameController = require('./controllers/gameRoutes.js')
+app.use('/game', gameController)
 
 
 // =======================================
